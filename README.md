@@ -1,15 +1,16 @@
 # Davis Basement Workshop & Drawer Explorer (v22)
 
-Interactive 3D workshop floorplan, 160-tool searchable inventory, and **73-photo Toolbox & Drawer Deep-Dive Explorer** across 9 opened toolboxes, cabinets, and under-bench cubbies.
+Live interactive workshop inventory (**160 deduplicated tool groups**, **73 real 1080p drawer & cubby photos** across 9 units, and a **Photorealistic PBR 3D Map**) — built for both desktop and mobile ("Add to Home Screen").
 
-## Features
-- **Drawers Explorer (73 Real Photos)**: Realistic sliding steel cabinet elevations + Photo Grid + tap-to-zoom lightbox + cross-drawer search across 9 units.
-- **Find Tool (160 Deduplicated Entries)**: Instant search across Zones Z1–Z7 with CSV export and 1-click jump to 3D or Drawer Photos.
-- **Photorealistic PBR 3D Map**: Full-bleed Three.js workshop with touch pinch-to-zoom, Zone camera dropdown, and toggleable View menu (Ceiling, Dims, Labels, Pass 2 Glow, Walk Tour).
-- **Mobile + Desktop Ready**: Responsive 4-tab layout with PWA `manifest.json` for iPhone/Android **Add to Home Screen**.
+- **GitHub Repo:** https://github.com/dsolovyo-debug/davis-basement-workshop
+- **Live GitHub Pages URL:** https://dsolovyo-debug.github.io/davis-basement-workshop/
 
-## Live Hosting (GitHub Pages)
-1. Go to **Settings → Pages** in this repository.
-2. Under **Build and deployment → Source**, choose **Deploy from a branch**.
-3. Select **Branch: `main`** and folder **`/ (root)`**, then click **Save**.
-4. Your live site will be ready in ~1 minute at `https://<your-username>.github.io/davis-basement-workshop/`.
+## Quick Publish (60 Seconds)
+1. Create an empty **Public** repo named `davis-basement-workshop` at https://github.com/new (leave README unchecked).
+2. Inside this unzipped folder, run:
+   ```bash
+   ./push_to_github.sh
+   ```
+   *(Or drag-and-drop all files + the `images/` folder directly into the repo on GitHub.)*
+3. Open **https://github.com/dsolovyo-debug/davis-basement-workshop/settings/pages** → **Deploy from a branch** → **`main`** / **`/ (root)`** → **Save**.
+4. Open **https://dsolovyo-debug.github.io/davis-basement-workshop/** on your phone and tap **Share → Add to Home Screen**!
