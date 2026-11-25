@@ -1,12 +1,10 @@
 #!/usr/bin/env bash
 set -e
-if [ -z "$1" ]; then
-  echo "Usage: ./push_to_github.sh <your-github-username>"
-  exit 1
-fi
+USER="${1:?Usage: ./push_to_github.sh YOUR_GITHUB_USERNAME}"
 git init -b main
 git add .
-git commit -m "Initial commit: Davis Basement Workshop v22 (160 tools, 73 drawer photos, PBR 3D)"
-git remote add origin "https://github.com/$1/davis-basement-workshop.git"
-git push -u origin main
-echo "Done! Enable GitHub Pages at: https://github.com/$1/davis-basement-workshop/settings/pages"
+git commit -m "Deploy Davis Basement Workshop v24 (Exact Wall Alignment + Deep-Zoom Wall Hotspots + 73 Drawers)"
+git remote remove origin 2>/dev/null || true
+git remote add origin "https://github.com/${USER}/davis-basement-workshop.git"
+git push -u origin main --force
+echo "Live soon at: https://${USER}.github.io/davis-basement-workshop/"
